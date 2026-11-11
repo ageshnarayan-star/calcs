@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  /* Light mode overrides */
+  html.light {
+    color-scheme: light;
+  }
+
+  html.light body {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  html.light .bg-slate-950 {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  html.light .bg-slate-900\/80,
+  html.light .bg-slate-900\/60,
+  html.light .bg-slate-900\/90,
+  html.light .bg-slate-900 {
+    background-color: #ffffff;
+    border-color: #e2e8f0;
+  }
+
+  html.light .bg-slate-800,
+  html.light .bg-slate-800\/80,
+  html.light .bg-slate-800\/60,
+  html.light .bg-slate-800\/50,
+  html.light .bg-slate-800\/40 {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    color: #1e293b;
+  }
+
+  html.light .text-slate-100,
+  html.light .text-white {
+    color: #0f172a;
+  }
+
+  html.light .text-slate-200,
+  html.light .text-slate-300 {
+    color: #334155;
+  }
+
+  html.light .text-slate-400 {
+    color: #64748b;
+  }
+
+  html.light .border-slate-800,
+  html.light .border-slate-700,
+  html.light .border-slate-700\/60,
+  html.light .border-slate-700\/40 {
+    border-color: #e2e8f0;
+  }
+
+  html.light .from-slate-900.to-slate-950 {
+    --tw-gradient-from: #f8fafc;
+    --tw-gradient-to: #f1f5f9;
+  }
+}
+
+/* Custom minimal scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* KaTeX adjustments */
+.katex-display {
+  margin: 0.5em 0 !important;
+}
+
+.katex {
+  font-size: 1.05em;
+}
